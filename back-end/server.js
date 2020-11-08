@@ -25,4 +25,4 @@ app.use('/api/users', userRoute);
 app.use('/api/orders', orderRoute);
 app.get('/api/config/paypal', (req, res) => res.send(process.env.PAYPAL_CLIENT_ID));
 
-app.listen(5000, console.log(`listen on port ${PORT} mode ${mode}`));
+app.listen(5000, console.log(`listen on port`));
