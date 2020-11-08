@@ -1,11 +1,11 @@
 import express from 'express';
-import { config } from 'dotenv';
+import dotenv from 'dotenv';
 import connectToDatabase from './config/db.js';
 import productRoute from './routes/productRoute.js';
 import userRoute from './routes/userRoute.js';
 import orderRoute from './routes/orderRoute.js';
 
-config();
+dotenv.config();
 
 const app = express();
 
