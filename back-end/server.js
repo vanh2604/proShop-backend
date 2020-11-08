@@ -3,6 +3,7 @@ import { config } from 'dotenv';
 import connectToDatabase from './config/db.js';
 import productRoute from './routes/productRoute.js';
 import userRoute from './routes/userRoute.js';
+import orderRoute from './routes/orderRoute.js';
 
 config();
 
@@ -21,5 +22,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/products', productRoute);
 app.use('/api/users', userRoute);
+app.use('/api/orders', orderRoute);
+app.get('/api/config/paypal', (req, res) => res.send(process.env.PAYPAL_CLIENT_ID));
 
 app.listen(5000, console.log(`listen on port ${PORT} mode ${mode}`));
