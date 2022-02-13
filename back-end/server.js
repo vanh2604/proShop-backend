@@ -13,8 +13,8 @@ connectToDatabase();
 
 app.use(express.json());
 
-const PORT = process.env.PORT || 5000;
-const mode = process.env.NODE_ENVIRONMENT;
+// const PORT = process.env.PORT || 5000;
+// const mode = process.env.NODE_ENVIRONMENT;
 
 app.get('/', (req, res) => {
   res.send('api is running');
