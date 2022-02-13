@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectToDatabase from './config/db.js';
+import cors from 'cors';
 import productRoute from './routes/productRoute.js';
 import userRoute from './routes/userRoute.js';
 import orderRoute from './routes/orderRoute.js';
@@ -12,6 +13,7 @@ const app = express();
 connectToDatabase();
 
 app.use(express.json());
+app.use(cors());
 
 // const PORT = process.env.PORT || 5000;
 // const mode = process.env.NODE_ENVIRONMENT;
